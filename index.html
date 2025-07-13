@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習用ウェブサイト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>My Website</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#about">私について</a></li>
+                <li><a href="#services">サービス</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ホームセクション -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>ウェブ開発を学ぼう</h2>
+                <p>HTML、CSS、JavaScriptの基本を練習するためのサイトです</p>
+                <button class="cta-button" onclick="showWelcomeMessage()">始める</button>
+            </div>
+        </section>
+
+        <!-- 私についてセクション -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>私について</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>こんにちは！私はウェブ開発を学習中の学生です。</p>
+                        <p>HTML、CSS、JavaScriptを使って様々なプロジェクトを作成しています。</p>
+                        <ul>
+                            <li>✓ HTML5の基本構造</li>
+                            <li>✓ CSS3のスタイリング</li>
+                            <li>✓ JavaScriptの基本的なインタラクション</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-image">画像プレースホルダー</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- サービスセクション -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>学習内容</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>HTML</h3>
+                        <p>ウェブページの基本構造を学習</p>
+                        <button class="learn-more" data-topic="HTML">詳細</button>
+                    </div>
+                    <div class="service-card">
+                        <h3>CSS</h3>
+                        <p>スタイルとレイアウトのデザイン</p>
+                        <button class="learn-more" data-topic="CSS">詳細</button>
+                    </div>
+                    <div class="service-card">
+                        <h3>JavaScript</h3>
+                        <p>インタラクティブな動作を実装</p>
+                        <button class="learn-more" data-topic="JavaScript">詳細</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせセクション -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>お問い合わせ</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">お名前:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">メッセージ:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">送信</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 練習用ウェブサイト. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- モーダル -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
